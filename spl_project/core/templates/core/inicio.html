@@ -1,0 +1,113 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Soluciones SPL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{% url 'inicio' %}" aria-label="Ir al inicio">
+      <span class="brand-mark">S</span>
+      <span>SOLUCIONES <strong>SPL</strong></span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Tecnología con propósito</p>
+        <h1>Impulsamos tu negocio con soluciones <em>digitales.</em></h1>
+        <p class="hero-copy">Desarrollamos tecnología a la medida para automatizar procesos, mejorar resultados y llevar tu empresa al siguiente nivel.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#servicios">Ver servicios <span>→</span></a>
+          <a class="button button-secondary" href="#contacto">Contáctanos</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Representación visual de transformación digital">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="dashboard-card">
+          <div class="card-head"><span>Rendimiento general</span><b>+24%</b></div>
+          <div class="chart">
+            <div class="bar" style="--h:38%"></div><div class="bar" style="--h:54%"></div><div class="bar" style="--h:46%"></div><div class="bar" style="--h:68%"></div><div class="bar" style="--h:61%"></div><div class="bar highlight" style="--h:88%"></div>
+          </div>
+          <div class="metric-row"><span><i></i> Operaciones</span><strong>98.4%</strong></div>
+        </div>
+        <div class="floating-card floating-card-one"><span>✓</span><div><b>Proyecto activo</b><small>Implementación completa</small></div></div>
+        <div class="floating-card floating-card-two"><strong>120+</strong><small>Clientes satisfechos</small></div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <p>Soluciones pensadas para crecer contigo</p>
+      <div class="trust-items"><span>INNOVACIÓN</span><span>CALIDAD</span><span>CONFIANZA</span><span>RESULTADOS</span></div>
+    </section>
+
+    <section class="services" id="servicios">
+      <div class="section-heading">
+        <p class="eyebrow"><span></span> Lo que hacemos</p>
+        <h2>Soluciones que generan valor</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">⌘</div><h3>Desarrollo web</h3><p>Aplicaciones rápidas, modernas y enfocadas en la experiencia de tus usuarios.</p><a href="#contacto">Conocer más →</a>
+        </article>
+        <article class="service-card featured">
+          <div class="service-icon">▦</div><h3>Sistemas a medida</h3><p>Software diseñado específicamente para resolver las necesidades de tu empresa.</p><a href="#contacto">Conocer más →</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">◎</div><h3>Consultoría tecnológica</h3><p>Diagnóstico estratégico para tomar mejores decisiones y adoptar la tecnología adecuada.</p><a href="#contacto">Conocer más →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div><p class="eyebrow"><span></span> Sobre nosotros</p><h2>Convertimos ideas en soluciones reales.</h2></div>
+      <p>Combinamos conocimiento técnico, estrategia y cercanía para crear productos digitales útiles, escalables y fáciles de utilizar.</p>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div><p>¿Tienes un proyecto en mente?</p><h2>Hagamos realidad tu próxima idea.</h2></div>
+      <a class="button button-light" href="mailto:contacto@solucionesspl.com">Iniciar conversación <span>→</span></a>
+    </section>
+
+    {% if enable_reports or enable_notifications %}
+    <section class="features-optional" aria-label="Funcionalidades opcionales">
+      {% if enable_reports %}
+      <article class="optional-card">
+        <span class="optional-icon">▥</span>
+        <div>
+          <small>Módulo habilitado</small>
+          <h3>Reportes y análisis</h3>
+          <p>Visualización de indicadores y métricas de rendimiento.</p>
+        </div>
+      </article>
+      {% endif %}
+      {% if enable_notifications %}
+      <article class="optional-card">
+        <span class="optional-icon">◉</span>
+        <div>
+          <small>Módulo habilitado</small>
+          <h3>Notificaciones</h3>
+          <p>Alertas para mantener informadas a las áreas responsables.</p>
+        </div>
+      </article>
+      {% endif %}
+    </section>
+    {% endif %}
+  </main>
+</body>
+</html>
